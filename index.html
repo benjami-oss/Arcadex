@@ -202,6 +202,24 @@ header { display:flex;align-items:center;justify-content:space-between;margin:4p
 <script>
 let chosen={diamonds:"86",price:"99"};
 const $=id=>document.getElementById(id);
+  $("verifyPlayer").addEventListener("click",()=>{
+  const id=$("gameid").value.trim();
+  const server=$("serverid").value.trim();
+  const result=$("playerResult");
+
+  if(!/^\d{4,20}$/.test(id)||!/^\d{1,8}$/.test(server)){
+    $("playerName").textContent="—";
+    $("playerStatus").textContent="Invalid details";
+    result.textContent="Please enter a valid numeric Game ID and Zone ID.";
+    result.classList.add("show");
+    return;
+  }
+
+  $("playerName").textContent="Lookup not connected";
+  $("playerStatus").textContent="Demo only";
+  result.textContent="Your ID format is valid, but live username verification is not connected yet.";
+  result.classList.add("show");
+});
 
 document.querySelectorAll(".pack").forEach(btn=>btn.addEventListener("click",()=>{
   document.querySelectorAll(".pack").forEach(x=>x.classList.remove("selected"));
