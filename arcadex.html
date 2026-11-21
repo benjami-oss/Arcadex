@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100d20">
+<title>Arcade X | MLBB Top-Up Demo</title>
+<style>
+:root{--bg:#0c0a16;--panel:#171327;--panel2:#211a38;--purple:#8b5cf6;--purple2:#6d3ee0;--text:#f7f3ff;--muted:#b9aecf;--line:#3b2d5b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#38245f 0,transparent 45%),var(--bg);color:var(--text);font:16px system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:720px;margin:auto;padding:18px 16px 42px}.top{display:flex;align-items:center;justify-content:space-between;margin:8px 0 22px}.brand{display:flex;gap:11px;align-items:center}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(145deg,#a78bfa,#6d28d9);display:grid;place-items:center;font-size:24px;box-shadow:0 8px 24px #6d28d955}.brand b{font-size:21px;letter-spacing:.4px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.5px}.demo{font-size:11px;font-weight:800;letter-spacing:1px;color:#c4b5fd;background:#35265a;border:1px solid #60479a;padding:7px 10px;border-radius:30px}
+.hero{border:1px solid var(--line);border-radius:23px;padding:23px;background:linear-gradient(130deg,#24183e,#151125 70%);overflow:hidden;position:relative}.eyebrow{color:#c4b5fd;font-size:11px;font-weight:800;letter-spacing:1.7px}.hero h1{font-size:clamp(29px,7vw,43px);line-height:1.08;margin:10px 0}.hero p{color:var(--muted);margin:0;max-width:390px;line-height:1.5}.crystals{font-size:50px;letter-spacing:5px;text-align:right;margin-top:-4px;filter:drop-shadow(0 5px 15px #a78bfa66)}
+.section{margin-top:25px}.section h2{font-size:18px;margin:0 0 5px}.sub{font-size:13px;color:var(--muted);margin:0 0 14px}.field{display:grid;gap:7px;margin:13px 0}.field label{font-size:13px;color:#ded4f1;font-weight:650}.field input{width:100%;padding:14px 13px;border:1px solid var(--line);border-radius:12px;background:#141021;color:white;font:inherit;outline:none}.field input:focus{border-color:#a78bfa;box-shadow:0 0 0 3px #8b5cf622}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.pack{background:linear-gradient(145deg,#211a36,#171327);border:1px solid var(--line);border-radius:15px;padding:15px 12px;text-align:left;color:white;cursor:pointer;min-height:104px}.pack:focus-visible,.pack.selected{outline:2px solid #a78bfa;border-color:#a78bfa;background:#2a2045}.gem{font-size:23px}.amount{font-size:20px;font-weight:800;margin:5px 0 2px}.price{color:#c4b5fd;font-weight:700;font-size:14px}.note{font-size:11px;color:var(--muted);margin-top:7px}
+.summary{background:#171327;border:1px solid var(--line);border-radius:16px;padding:16px;margin-top:18px}.sumrow{display:flex;justify-content:space-between;gap:12px;padding:5px 0;color:var(--muted);font-size:14px}.sumrow strong{color:white}.total{border-top:1px solid var(--line);margin-top:8px;padding-top:12px;font-size:17px}
+button.primary{width:100%;margin-top:15px;padding:15px;border:0;border-radius:13px;background:linear-gradient(100deg,#8b5cf6,#6d3ee0);color:white;font-size:15px;font-weight:800;letter-spacing:.3px;cursor:pointer}button.primary:active{transform:scale(.99)}
+.notice{font-size:11px;line-height:1.5;color:#b9aecf;text-align:center;margin:14px 6px}.result{display:none;margin-top:15px;padding:14px;border-radius:13px;background:#183326;border:1px solid #2e7650;color:#c7f9d9;font-size:14px;line-height:1.5}.result.show{display:block}.footer{text-align:center;color:#807693;font-size:11px;margin-top:28px}
+@media(min-width:560px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.hero{padding:29px}.crystals{font-size:62px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="top">
+  <div class="brand"><div class="logo">💎</div><div><b>Arcade X</b><small>MLBB TOP-UP STORE</small></div></div>
+  <span class="demo">DEMO MODE</span>
+</header>
+<section class="hero">
+  <div class="eyebrow">WELCOME TO ARCADE X</div>
+  <h1>Power up<br>your game.</h1>
+  <p>A simple, smooth diamond top-up experience. Choose a sample package to preview the order flow.</p>
+  <div class="crystals" aria-hidden="true">💎 ✦</div>
+</section>
+
+<section class="section">
+  <h2>1. Player details</h2><p class="sub">Enter sample details to preview an order. Never share your game password.</p>
+  <div class="field"><label for="gameid">Game ID</label><input id="gameid" inputmode="numeric" placeholder="e.g. 123456789" maxlength="20"></div>
+  <div class="field"><label for="serverid">Server ID</label><input id="serverid" inputmode="numeric" placeholder="e.g. 1234" maxlength="8"></div>
+</section>
+
+<section class="section">
+  <h2>2. Select a package</h2><p class="sub">Sample packages and prices for website testing only.</p>
+  <div class="grid" id="packages">
+    <button class="pack selected" type="button" data-diamonds="86" data-price="99"><div class="gem">💎</div><div class="amount">86 Diamonds</div><div class="price">₹99 · Demo</div></button>
+    <button class="pack" type="button" data-diamonds="172" data-price="199"><div class="gem">💎</div><div class="amount">172 Diamonds</div><div class="price">₹199 · Demo</div></button>
+    <button class="pack" type="button" data-diamonds="257" data-price="299"><div class="gem">💎</div><div class="amount">257 Diamonds</div><div class="price">₹299 · Demo</div></button>
+    <button class="pack" type="button" data-diamonds="344" data-price="399"><div class="gem">💎</div><div class="amount">344 Diamonds</div><div class="price">₹399 · Demo</div></button>
+  </div>
+</section>
+
+<section class="section">
+  <h2>3. Review your order</h2>
+  <div class="summary">
+    <div class="sumrow"><span>Game ID</span><strong id="sumid">Not entered</strong></div>
+    <div class="sumrow"><span>Server ID</span><strong id="sumserver">Not entered</strong></div>
+    <div class="sumrow"><span>Package</span><strong id="sumpackage">86 Diamonds</strong></div>
+    <div class="sumrow total"><span>Demo total</span><strong id="sumprice">₹99</strong></div>
+    <button class="primary" id="order">Preview demo order</button>
+    <div class="result" id="result" role="status"></div>
+  </div>
+  <p class="notice">DEMO ONLY — this website does not accept money or deliver diamonds. No real order will be placed. Arcade X is an independent demo concept and is not affiliated with or endorsed by Moonton.</p>
+</section>
+<footer class="footer">© 2026 Arcade X · Demo storefront</footer>
+</main>
+<script>
+let chosen={diamonds:"86",price:"99"};
+const $=id=>document.getElementById(id);
+document.querySelectorAll(".pack").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll(".pack").forEach(x=>x.classList.remove("selected"));
+  btn.classList.add("selected");
+  chosen={diamonds:btn.dataset.diamonds,price:btn.dataset.price};
+  $("sumpackage").textContent=chosen.diamonds+" Diamonds";
+  $("sumprice").textContent="₹"+chosen.price;
+  $("result").classList.remove("show");
+}));
+$("gameid").addEventListener("input",()=>{$("sumid").textContent=$("gameid").value||"Not entered";});
+$("serverid").addEventListener("input",()=>{$("sumserver").textContent=$("serverid").value||"Not entered";});
+$("order").addEventListener("click",()=>{
+  const id=$("gameid").value.trim(),server=$("serverid").value.trim();
+  if(!/^\d{4,20}$/.test(id)||!/^\d{1,8}$/.test(server)){
+    $("result").textContent="Please enter a numeric Game ID (4–20 digits) and Server ID (1–8 digits) to preview the order.";
+    $("result").style.background="#3a2918";$("result").style.borderColor="#8a6331";$("result").style.color="#ffe2b5";
+  }else{
+    $("result").textContent="Demo order preview created! Package: "+chosen.diamonds+" Diamonds · Demo total: ₹"+chosen.price+". No payment was taken and no diamonds were delivered.";
+    $("result").style.background="#183326";$("result").style.borderColor="#2e7650";$("result").style.color="#c7f9d9";
+  }
+  $("result").classList.add("show");
+});
+</script>
+</body>
+</html>
