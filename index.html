@@ -18,14 +18,12 @@
   --muted:#9eabc5;
 }
 * { box-sizing:border-box; }
-
 body {
   margin:0;
   background:radial-gradient(ellipse at 50% -15%,#253d70 0,transparent 48%),var(--bg);
   color:var(--text);
   font:16px system-ui,sans-serif;
 }
-
 .wrap { max-width:760px;margin:auto;padding:20px 16px 44px; }
 header { display:flex;align-items:center;justify-content:space-between;margin:4px 0 22px; }
 .brand { display:flex;align-items:center;gap:12px; }
@@ -41,6 +39,17 @@ header { display:flex;align-items:center;justify-content:space-between;margin:4p
   border-radius:30px;padding:7px 11px;font-size:10px;font-weight:850;
   letter-spacing:1px;
 }
+
+/* LING HERO BANNER */
+.ling-banner {
+  width:100%;
+  display:block;
+  border:1px solid #34496c;
+  border-radius:22px;
+  margin-bottom:18px;
+  box-shadow:0 12px 35px #6655ff25;
+}
+
 .hero {
   border:1px solid #34496c;border-radius:25px;padding:27px;
   background:linear-gradient(125deg,#1b3152,#17152f 68%,#251b48);
@@ -127,7 +136,6 @@ header { display:flex;align-items:center;justify-content:space-between;margin:4p
   font-size:13px;
 }
 .footer { text-align:center;color:#65738e;font-size:11px;margin-top:28px; }
-
 @media(min-width:580px) {
   .grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
   .hero { padding:32px; }
@@ -146,6 +154,13 @@ header { display:flex;align-items:center;justify-content:space-between;margin:4p
   </div>
   <span class="tag">DEMO MODE</span>
 </header>
+
+<!-- LING BANNER IMAGE -->
+<img
+  class="ling-banner"
+  src="ling-banner.png"
+  alt="Ling - Mobile Legends hero banner"
+>
 
 <section class="hero">
   <div class="kicker">LEVEL UP YOUR EXPERIENCE</div>
@@ -191,23 +206,31 @@ header { display:flex;align-items:center;justify-content:space-between;margin:4p
 
   <div class="grid">
     <button class="pack selected" type="button" data-diamonds="86" data-price="99">
-      <div class="gem">💎</div><div class="amount">86 Diamonds</div>
-      <div class="price">₹99</div><div class="note">Demo package</div>
+      <div class="gem">💎</div>
+      <div class="amount">86 Diamonds</div>
+      <div class="price">₹99</div>
+      <div class="note">Demo package</div>
     </button>
 
     <button class="pack" type="button" data-diamonds="172" data-price="199">
-      <div class="gem">💎</div><div class="amount">172 Diamonds</div>
-      <div class="price">₹199</div><div class="note">Demo package</div>
+      <div class="gem">💎</div>
+      <div class="amount">172 Diamonds</div>
+      <div class="price">₹199</div>
+      <div class="note">Demo package</div>
     </button>
 
     <button class="pack" type="button" data-diamonds="257" data-price="299">
-      <div class="gem">💎</div><div class="amount">257 Diamonds</div>
-      <div class="price">₹299</div><div class="note">Demo package</div>
+      <div class="gem">💎</div>
+      <div class="amount">257 Diamonds</div>
+      <div class="price">₹299</div>
+      <div class="note">Demo package</div>
     </button>
 
     <button class="pack" type="button" data-diamonds="344" data-price="399">
-      <div class="gem">💎</div><div class="amount">344 Diamonds</div>
-      <div class="price">₹399</div><div class="note">Demo package</div>
+      <div class="gem">💎</div>
+      <div class="amount">344 Diamonds</div>
+      <div class="price">₹399</div>
+      <div class="note">Demo package</div>
     </button>
   </div>
 </section>
@@ -237,14 +260,14 @@ header { display:flex;align-items:center;justify-content:space-between;margin:4p
     <h2>Order history</h2>
   </div>
   <p class="sub">Your previously created demo orders.</p>
-
   <div id="orderHistory">
     <div class="empty">No demo orders yet. Create your first demo order above.</div>
   </div>
 </section>
 
 <p class="notice">
-  DEMO ONLY — no money is collected, no payment is processed, and no diamonds are delivered. Orders are stored only in this browser. This independent concept is not affiliated with or endorsed by Moonton.
+  DEMO ONLY — no money is collected, no payment is processed, and no diamonds are delivered.
+  Orders are stored only in this browser. This independent concept is not affiliated with or endorsed by Moonton.
 </p>
 
 <footer class="footer">© 2026 Arcade X · Independent demo storefront</footer>
@@ -312,7 +335,6 @@ function renderHistory() {
 
     addText(top, "span", "order-id", order.id);
     addText(top, "span", "status", "DEMO CREATED");
-
     card.appendChild(top);
 
     const info = document.createElement("div");
@@ -425,7 +447,6 @@ $("order").addEventListener("click", () => {
   }
 
   $("demoOrderId").textContent = orderId;
-
   result.textContent =
     "Demo order created successfully! Reference: " +
     orderId + " · " + chosen.diamonds +
