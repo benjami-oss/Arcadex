@@ -17,7 +17,6 @@
   --text:#f4f7ff;
   --muted:#9eabc5;
 }
-
 * { box-sizing:border-box; }
 
 body {
@@ -27,268 +26,107 @@ body {
   font:16px system-ui,sans-serif;
 }
 
-.wrap {
-  max-width:760px;
-  margin:auto;
-  padding:20px 16px 44px;
-}
-
-header {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin:4px 0 22px;
-}
-
-.brand {
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
+.wrap { max-width:760px;margin:auto;padding:20px 16px 44px; }
+header { display:flex;align-items:center;justify-content:space-between;margin:4px 0 22px; }
+.brand { display:flex;align-items:center;gap:12px; }
 .logo {
-  width:46px;
-  height:46px;
-  display:grid;
-  place-items:center;
-  border-radius:15px;
-  background:linear-gradient(145deg,var(--blue),var(--violet));
-  font-size:25px;
-  box-shadow:0 8px 30px #55d6ff35;
+  width:46px;height:46px;display:grid;place-items:center;
+  border-radius:15px;background:linear-gradient(145deg,var(--blue),var(--violet));
+  font-size:25px;box-shadow:0 8px 30px #55d6ff35;
 }
-
-.brand b {
-  font-size:21px;
-  letter-spacing:.5px;
-}
-
-.brand small {
-  display:block;
-  color:var(--muted);
-  font-size:10px;
-  letter-spacing:2px;
-}
-
+.brand b { font-size:21px;letter-spacing:.5px; }
+.brand small { display:block;color:var(--muted);font-size:10px;letter-spacing:2px; }
 .tag {
-  border:1px solid #45618a;
-  background:#152541;
-  color:#9be7ff;
-  border-radius:30px;
-  padding:7px 11px;
-  font-size:10px;
-  font-weight:850;
+  border:1px solid #45618a;background:#152541;color:#9be7ff;
+  border-radius:30px;padding:7px 11px;font-size:10px;font-weight:850;
   letter-spacing:1px;
 }
-
 .hero {
-  border:1px solid #34496c;
-  border-radius:25px;
-  padding:27px;
+  border:1px solid #34496c;border-radius:25px;padding:27px;
   background:linear-gradient(125deg,#1b3152,#17152f 68%,#251b48);
-  position:relative;
-  overflow:hidden;
+  position:relative;overflow:hidden;
 }
-
-.kicker {
-  color:#8de4ff;
-  font-size:10px;
-  font-weight:850;
-  letter-spacing:2px;
-}
-
-.hero h1 {
-  font-size:clamp(34px,8vw,49px);
-  line-height:1.02;
-  margin:12px 0;
-}
-
-.hero p {
-  max-width:390px;
-  color:#c0cce0;
-  line-height:1.55;
-  margin:0;
-}
-
-.orb {
-  position:absolute;
-  right:14px;
-  bottom:9px;
-  font-size:76px;
-  filter:drop-shadow(0 5px 22px #55d6ff66);
-}
-
+.kicker { color:#8de4ff;font-size:10px;font-weight:850;letter-spacing:2px; }
+.hero h1 { font-size:clamp(34px,8vw,49px);line-height:1.02;margin:12px 0; }
+.hero p { max-width:390px;color:#c0cce0;line-height:1.55;margin:0; }
+.orb { position:absolute;right:14px;bottom:9px;font-size:76px; }
 .section { margin-top:26px; }
-
-.heading {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:6px;
-}
-
+.heading { display:flex;align-items:center;gap:10px;margin-bottom:6px; }
 .number {
-  width:27px;
-  height:27px;
-  border-radius:9px;
-  display:grid;
-  place-items:center;
-  background:#1c3151;
-  color:#8de4ff;
-  font-weight:850;
-  font-size:13px;
+  width:27px;height:27px;border-radius:9px;display:grid;place-items:center;
+  background:#1c3151;color:#8de4ff;font-weight:850;font-size:13px;
 }
-
-.section h2 { font-size:18px; margin:0; }
-
-.sub {
-  font-size:13px;
-  color:var(--muted);
-  margin:0 0 14px 37px;
-}
-
-.field {
-  display:grid;
-  gap:7px;
-  margin:13px 0;
-}
-
-.field label {
-  font-size:13px;
-  color:#dce6f8;
-  font-weight:650;
-}
-
+.section h2 { font-size:18px;margin:0; }
+.sub { font-size:13px;color:var(--muted);margin:0 0 14px 37px; }
+.field { display:grid;gap:7px;margin:13px 0; }
+.field label { font-size:13px;color:#dce6f8;font-weight:650; }
 .field input {
-  width:100%;
-  padding:14px;
-  border:1px solid var(--line);
-  border-radius:13px;
-  background:#0e1527;
-  color:white;
-  font:inherit;
-  outline:none;
+  width:100%;padding:14px;border:1px solid var(--line);border-radius:13px;
+  background:#0e1527;color:white;font:inherit;outline:none;
 }
-
-.field input:focus {
-  border-color:var(--blue);
-  box-shadow:0 0 0 3px #55d6ff1c;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:11px;
-}
-
+.field input:focus { border-color:var(--blue); }
+.grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px; }
 .pack {
-  text-align:left;
-  min-height:112px;
-  padding:15px 13px;
-  border:1px solid var(--line);
-  border-radius:16px;
+  text-align:left;min-height:112px;padding:15px 13px;
+  border:1px solid var(--line);border-radius:16px;
   background:linear-gradient(145deg,#18243d,#11182b);
-  color:white;
-  cursor:pointer;
+  color:white;cursor:pointer;
 }
-
 .pack.selected {
   border-color:var(--blue);
   background:linear-gradient(145deg,#203d5c,#1b2140);
   box-shadow:0 0 0 1px #55d6ff55;
 }
-
 .gem { font-size:23px; }
-
-.amount {
-  font-size:19px;
-  font-weight:850;
-  margin:5px 0 2px;
-}
-
-.price {
-  color:#8de4ff;
-  font-weight:750;
-  font-size:14px;
-}
-
-.note {
-  font-size:11px;
-  color:var(--muted);
-  margin-top:6px;
-}
-
+.amount { font-size:19px;font-weight:850;margin:5px 0 2px; }
+.price { color:#8de4ff;font-weight:750;font-size:14px; }
+.note { font-size:11px;color:var(--muted);margin-top:6px; }
 .summary {
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:17px;
-  background:linear-gradient(145deg,#151e34,#101627);
-  margin-top:16px;
+  border:1px solid var(--line);border-radius:18px;padding:17px;
+  background:linear-gradient(145deg,#151e34,#101627);margin-top:16px;
 }
-
 .sumrow {
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  padding:7px 0;
-  color:var(--muted);
-  font-size:14px;
+  display:flex;justify-content:space-between;gap:12px;
+  padding:7px 0;color:var(--muted);font-size:14px;
 }
-
-.sumrow strong {
-  color:white;
-  text-align:right;
-  overflow-wrap:anywhere;
-}
-
-.total {
-  border-top:1px solid var(--line);
-  margin-top:8px;
-  padding-top:14px;
-  font-size:17px;
-}
-
+.sumrow strong { color:white;text-align:right;overflow-wrap:anywhere; }
+.total { border-top:1px solid var(--line);margin-top:8px;padding-top:14px;font-size:17px; }
 .primary {
-  width:100%;
-  margin-top:15px;
-  padding:15px;
-  border:0;
-  border-radius:13px;
+  width:100%;margin-top:15px;padding:15px;border:0;border-radius:13px;
   background:linear-gradient(100deg,#39c9f3,#7968ff);
-  color:#07101e;
-  font-size:15px;
-  font-weight:900;
-  cursor:pointer;
+  color:#07101e;font-size:15px;font-weight:900;cursor:pointer;
 }
-
 .result {
-  display:none;
-  margin-top:14px;
-  padding:14px;
-  border-radius:13px;
-  background:#15372e;
-  border:1px solid #34765d;
-  color:#c9ffe8;
-  font-size:13px;
-  line-height:1.55;
-  overflow-wrap:anywhere;
+  display:none;margin-top:14px;padding:14px;border-radius:13px;
+  background:#15372e;border:1px solid #34765d;color:#c9ffe8;
+  font-size:13px;line-height:1.55;overflow-wrap:anywhere;
 }
-
 .result.show { display:block; }
-
 .notice {
-  font-size:11px;
-  line-height:1.6;
-  color:#91a0ba;
-  text-align:center;
-  margin:15px 5px;
+  font-size:11px;line-height:1.6;color:#91a0ba;
+  text-align:center;margin:15px 5px;
 }
-
-.footer {
-  text-align:center;
-  color:#65738e;
-  font-size:11px;
-  margin-top:28px;
+.order-card {
+  border:1px solid var(--line);border-radius:15px;
+  background:linear-gradient(145deg,#18243d,#11182b);
+  padding:15px;margin-top:12px;
 }
+.order-top {
+  display:flex;justify-content:space-between;gap:10px;
+  flex-wrap:wrap;align-items:center;
+}
+.order-id { color:#8de4ff;font-weight:850;font-size:14px; }
+.status {
+  color:#9be7ff;background:#152541;border:1px solid #45618a;
+  padding:5px 9px;border-radius:20px;font-size:10px;font-weight:800;
+}
+.order-info { color:var(--muted);font-size:12px;line-height:1.8;margin-top:10px; }
+.empty {
+  text-align:center;padding:25px 12px;color:var(--muted);
+  border:1px dashed var(--line);border-radius:15px;margin-top:15px;
+  font-size:13px;
+}
+.footer { text-align:center;color:#65738e;font-size:11px;margin-top:28px; }
 
 @media(min-width:580px) {
   .grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
@@ -304,10 +142,7 @@ header {
 <header>
   <div class="brand">
     <div class="logo">💎</div>
-    <div>
-      <b>ARCADE X</b>
-      <small>MLBB TOP-UP STORE</small>
-    </div>
+    <div><b>ARCADE X</b><small>MLBB TOP-UP STORE</small></div>
   </div>
   <span class="tag">DEMO MODE</span>
 </header>
@@ -320,13 +155,11 @@ header {
 </section>
 
 <!-- PLAYER DETAILS -->
-
 <section class="section">
   <div class="heading">
     <span class="number">01</span>
     <h2>Verify your player</h2>
   </div>
-
   <p class="sub">Enter your Mobile Legends player details. Your game password is never needed.</p>
 
   <div class="field">
@@ -339,69 +172,47 @@ header {
     <input id="serverid" inputmode="numeric" maxlength="8" placeholder="Enter Zone ID">
   </div>
 
-  <button class="primary" id="verifyPlayer" type="button">
-    Verify Player
-  </button>
-
+  <button class="primary" id="verifyPlayer" type="button">Verify Player</button>
   <div class="result" id="playerResult" role="status"></div>
 
   <div class="summary">
-    <div class="sumrow">
-      <span>Player username</span>
-      <strong id="playerName">Not verified</strong>
-    </div>
-    <div class="sumrow">
-      <span>Verification</span>
-      <strong id="playerStatus">Not checked</strong>
-    </div>
+    <div class="sumrow"><span>Player username</span><strong id="playerName">Not verified</strong></div>
+    <div class="sumrow"><span>Verification</span><strong id="playerStatus">Not checked</strong></div>
   </div>
 </section>
 
-<!-- PACKAGE SELECTION -->
-
+<!-- PACKAGES -->
 <section class="section">
   <div class="heading">
     <span class="number">02</span>
     <h2>Choose a package</h2>
   </div>
-
   <p class="sub">Select a sample diamond package.</p>
 
   <div class="grid">
-
     <button class="pack selected" type="button" data-diamonds="86" data-price="99">
-      <div class="gem">💎</div>
-      <div class="amount">86 Diamonds</div>
-      <div class="price">₹99</div>
-      <div class="note">Demo package</div>
+      <div class="gem">💎</div><div class="amount">86 Diamonds</div>
+      <div class="price">₹99</div><div class="note">Demo package</div>
     </button>
 
     <button class="pack" type="button" data-diamonds="172" data-price="199">
-      <div class="gem">💎</div>
-      <div class="amount">172 Diamonds</div>
-      <div class="price">₹199</div>
-      <div class="note">Demo package</div>
+      <div class="gem">💎</div><div class="amount">172 Diamonds</div>
+      <div class="price">₹199</div><div class="note">Demo package</div>
     </button>
 
     <button class="pack" type="button" data-diamonds="257" data-price="299">
-      <div class="gem">💎</div>
-      <div class="amount">257 Diamonds</div>
-      <div class="price">₹299</div>
-      <div class="note">Demo package</div>
+      <div class="gem">💎</div><div class="amount">257 Diamonds</div>
+      <div class="price">₹299</div><div class="note">Demo package</div>
     </button>
 
     <button class="pack" type="button" data-diamonds="344" data-price="399">
-      <div class="gem">💎</div>
-      <div class="amount">344 Diamonds</div>
-      <div class="price">₹399</div>
-      <div class="note">Demo package</div>
+      <div class="gem">💎</div><div class="amount">344 Diamonds</div>
+      <div class="price">₹399</div><div class="note">Demo package</div>
     </button>
-
   </div>
 </section>
 
 <!-- ORDER SUMMARY -->
-
 <section class="section">
   <div class="heading">
     <span class="number">03</span>
@@ -409,61 +220,116 @@ header {
   </div>
 
   <div class="summary">
-
-    <div class="sumrow">
-      <span>Game ID</span>
-      <strong id="sumid">Not entered</strong>
-    </div>
-
-    <div class="sumrow">
-      <span>Zone / Server</span>
-      <strong id="sumserver">Not entered</strong>
-    </div>
-
-    <div class="sumrow">
-      <span>Selected package</span>
-      <strong id="sumpackage">86 Diamonds</strong>
-    </div>
-
-    <div class="sumrow">
-      <span>Order ID</span>
-      <strong id="demoOrderId">Not generated</strong>
-    </div>
-
-    <div class="sumrow total">
-      <span>Demo total</span>
-      <strong id="sumprice">₹99</strong>
-    </div>
-
-    <button class="primary" id="order" type="button">
-      Preview demo order
-    </button>
-
+    <div class="sumrow"><span>Game ID</span><strong id="sumid">Not entered</strong></div>
+    <div class="sumrow"><span>Zone / Server</span><strong id="sumserver">Not entered</strong></div>
+    <div class="sumrow"><span>Selected package</span><strong id="sumpackage">86 Diamonds</strong></div>
+    <div class="sumrow"><span>Order ID</span><strong id="demoOrderId">Not generated</strong></div>
+    <div class="sumrow total"><span>Demo total</span><strong id="sumprice">₹99</strong></div>
+    <button class="primary" id="order" type="button">Preview demo order</button>
     <div class="result" id="result" role="status"></div>
-
   </div>
-
-  <p class="notice">
-    DEMO ONLY — no money is collected, no payment is processed, and no diamonds are delivered. This independent concept is not affiliated with or endorsed by Moonton.
-  </p>
 </section>
 
-<footer class="footer">
-  © 2026 Arcade X · Independent demo storefront
-</footer>
+<!-- ORDER HISTORY -->
+<section class="section">
+  <div class="heading">
+    <span class="number">04</span>
+    <h2>Order history</h2>
+  </div>
+  <p class="sub">Your previously created demo orders.</p>
+
+  <div id="orderHistory">
+    <div class="empty">No demo orders yet. Create your first demo order above.</div>
+  </div>
+</section>
+
+<p class="notice">
+  DEMO ONLY — no money is collected, no payment is processed, and no diamonds are delivered. Orders are stored only in this browser. This independent concept is not affiliated with or endorsed by Moonton.
+</p>
+
+<footer class="footer">© 2026 Arcade X · Independent demo storefront</footer>
 
 </main>
 
 <script>
-let chosen = {
-  diamonds: "86",
-  price: "99"
-};
-
+let chosen = { diamonds: "86", price: "99" };
 const $ = id => document.getElementById(id);
+const STORAGE_KEY = "arcadeXDemoOrders";
 
-// PLAYER VERIFICATION DEMO
+// Read saved demo orders
+function getOrders() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    const orders = saved ? JSON.parse(saved) : [];
+    return Array.isArray(orders) ? orders : [];
+  } catch (error) {
+    return [];
+  }
+}
 
+// Save demo orders
+function saveOrders(orders) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(orders));
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
+// Safely create text elements
+function addText(parent, tag, className, value) {
+  const element = document.createElement(tag);
+  element.className = className;
+  element.textContent = value;
+  parent.appendChild(element);
+  return element;
+}
+
+// Display order history
+function renderHistory() {
+  const container = $("orderHistory");
+  const orders = getOrders();
+
+  container.replaceChildren();
+
+  if (orders.length === 0) {
+    addText(
+      container,
+      "div",
+      "empty",
+      "No demo orders yet. Create your first demo order above."
+    );
+    return;
+  }
+
+  orders.forEach(order => {
+    const card = document.createElement("div");
+    card.className = "order-card";
+
+    const top = document.createElement("div");
+    top.className = "order-top";
+
+    addText(top, "span", "order-id", order.id);
+    addText(top, "span", "status", "DEMO CREATED");
+
+    card.appendChild(top);
+
+    const info = document.createElement("div");
+    info.className = "order-info";
+
+    addText(info, "div", "", "Game ID: " + order.gameId);
+    addText(info, "div", "", "Zone ID: " + order.serverId);
+    addText(info, "div", "", "Package: " + order.diamonds + " Diamonds");
+    addText(info, "div", "", "Price: ₹" + order.price);
+    addText(info, "div", "", "Date: " + order.date);
+
+    card.appendChild(info);
+    container.appendChild(card);
+  });
+}
+
+// Player verification demo
 $("verifyPlayer").addEventListener("click", () => {
   const id = $("gameid").value.trim();
   const server = $("serverid").value.trim();
@@ -476,17 +342,15 @@ $("verifyPlayer").addEventListener("click", () => {
   } else {
     $("playerName").textContent = "Lookup not connected";
     $("playerStatus").textContent = "Demo only";
-    result.textContent = "Your ID format is valid, but live username verification is not connected.";
+    result.textContent = "ID format is valid, but live player verification is not connected.";
   }
 
   result.classList.add("show");
 });
 
-// PACKAGE SELECTION
-
+// Package selection
 document.querySelectorAll(".pack").forEach(button => {
   button.addEventListener("click", () => {
-
     document.querySelectorAll(".pack").forEach(item => {
       item.classList.remove("selected");
     });
@@ -500,14 +364,12 @@ document.querySelectorAll(".pack").forEach(button => {
 
     $("sumpackage").textContent = chosen.diamonds + " Diamonds";
     $("sumprice").textContent = "₹" + chosen.price;
-
     $("result").classList.remove("show");
     $("demoOrderId").textContent = "Not generated";
   });
 });
 
-// UPDATE ORDER SUMMARY
-
+// Update summary when IDs change
 $("gameid").addEventListener("input", () => {
   $("sumid").textContent = $("gameid").value || "Not entered";
   $("demoOrderId").textContent = "Not generated";
@@ -518,46 +380,68 @@ $("serverid").addEventListener("input", () => {
   $("demoOrderId").textContent = "Not generated";
 });
 
-// GENERATE UNIQUE DEMO ORDER ID
-
+// Create and save a demo order
 $("order").addEventListener("click", () => {
-
-  const id = $("gameid").value.trim();
-  const server = $("serverid").value.trim();
+  const gameId = $("gameid").value.trim();
+  const serverId = $("serverid").value.trim();
   const result = $("result");
 
-  if (!/^\d{4,20}$/.test(id) || !/^\d{1,8}$/.test(server)) {
-
+  if (!/^\d{4,20}$/.test(gameId) || !/^\d{1,8}$/.test(serverId)) {
     $("demoOrderId").textContent = "Not generated";
-
-    result.textContent =
-      "Please enter a valid Game ID and Zone ID first.";
-
+    result.textContent = "Please enter a valid Game ID and Zone ID first.";
     result.style.background = "#382b1c";
     result.style.borderColor = "#8a6936";
     result.style.color = "#ffe5b8";
-
-  } else {
-
-    const orderId =
-      "AX-" + Date.now().toString(36).toUpperCase();
-
-    $("demoOrderId").textContent = orderId;
-
-    result.textContent =
-      "Demo order created successfully! Reference: " +
-      orderId + " · " +
-      chosen.diamonds + " Diamonds · ₹" +
-      chosen.price +
-      ". No payment was taken and no diamonds were delivered.";
-
-    result.style.background = "#15372e";
-    result.style.borderColor = "#34765d";
-    result.style.color = "#c9ffe8";
+    result.classList.add("show");
+    return;
   }
 
+  const orderId =
+    "AX-" + Date.now().toString(36).toUpperCase() +
+    "-" + Math.random().toString(36).slice(2, 6).toUpperCase();
+
+  const now = new Date();
+
+  const orderData = {
+    id: orderId,
+    gameId: gameId,
+    serverId: serverId,
+    diamonds: chosen.diamonds,
+    price: chosen.price,
+    date: now.toLocaleString()
+  };
+
+  const orders = getOrders();
+  orders.unshift(orderData);
+
+  if (!saveOrders(orders)) {
+    result.textContent =
+      "This browser could not save the order. Check browser storage settings.";
+    result.style.background = "#382b1c";
+    result.style.borderColor = "#8a6936";
+    result.style.color = "#ffe5b8";
+    result.classList.add("show");
+    return;
+  }
+
+  $("demoOrderId").textContent = orderId;
+
+  result.textContent =
+    "Demo order created successfully! Reference: " +
+    orderId + " · " + chosen.diamonds +
+    " Diamonds · ₹" + chosen.price +
+    ". No payment was taken and no diamonds were delivered.";
+
+  result.style.background = "#15372e";
+  result.style.borderColor = "#34765d";
+  result.style.color = "#c9ffe8";
   result.classList.add("show");
+
+  renderHistory();
 });
+
+// Load saved history when the page opens
+renderHistory();
 </script>
 
 </body>
